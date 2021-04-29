@@ -34,18 +34,23 @@
   flex-direction: row;
 }
 
-/* Home */
-.Home {
-}
+/* Layar Sapa  */
 
-.Home h1 {
+.LayarSapa h1 {
   padding: 20vh;
   font-family: "Dancing Script", cursive;
 }
 
-.Home h2 {
+.LayarSapa h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 8vh;
+}
+
+.Scanner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* QR */
@@ -155,6 +160,12 @@
   padding: 2vw;
 }
 
+.BuildContainer {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
 .Build {
   border: 2px solid #6883ba;
   text-align: left;
@@ -164,9 +175,14 @@
   margin: 2vw;
 }
 .BuildPreview {
-  border: 2px solid #6883ba;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 2vw;
+  margin-left: 10%;
+  margin-top: 5%;
+  /* right: 50%; */
+  max-width: 80%;
 }
 .waktu {
   padding-bottom: 2vh !important;
@@ -176,18 +192,21 @@
 /* Undangancss */
 
 /* section1 */
-.modal-dialog {
-  margin: 0 !important;
+.UploadImage {
+  opacity: 1 !important;
+  display: flex;
 }
-.modal-content {
-  width: 100vw !important;
-  height: 100vh !important;
-  margin: 0;
-  padding: 0;
+
+.Section0 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
 }
 
 .coverdepan {
   /* position: fixed; */
+  /* display: none; */
 
   display: flex;
   flex-direction: column;
@@ -195,15 +214,35 @@
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: rgb(27, 23, 23);
+  /* color: white; */
   background-position: center;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
+
   /* display: flex; */
 }
+.GambarDepan {
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  /* display: none; */
+}
+.coverdepanText {
+  position: absolute;
+  text-align: center;
+}
 .coverdepan h2 {
+  color: black;
+  font-size: 32px;
   font-family: "Dancing Script", cursive;
   padding: 10vh;
+}
+
+.coverdepan p {
+  /* padding-top: 20vh; */
+  color: black;
 }
 
 .section1 {
@@ -219,27 +258,15 @@
   color: white;
 }
 
-.section1:hover h3,
-.section1:hover h1,
-.section1:hover h2,
-.section1:hover img {
-  transform: translateY(0);
-  opacity: 1;
-  /* transform: ; */
-  /* display: block; */
-}
 .section1 img {
   width: 300px;
   height: auto;
   margin-top: 48px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
 .section1 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 64px !important;
-  opacity: 0;
 
   transition: opacity 1s ease-in-out;
   transition-delay: 0.5s;
@@ -247,17 +274,10 @@
 .section1 h2 {
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  transition-delay: 0.75s;
 }
 .section1 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
 }
 
 /* section2 */
@@ -273,9 +293,6 @@
   padding: 24px;
   width: 240px;
   height: 240px;
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .imgputri img {
@@ -283,51 +300,30 @@
   padding: 24px;
   width: 240px;
   height: 240px;
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 .section2 h1 {
   font-family: "Dancing Script", cursive;
   font-size: 144px;
-  opacity: 0;
-
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.5s;
 }
 .section2 h2 {
   font-family: "Dancing Script", cursive;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.6s;
-  opacity: 0;
+  padding-top: 5vh;
 }
 
 .section2 h3 {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.7s;
+  font-size: 15px;
+  padding: 2vw 6vw 0 6vw;
 }
 
 .section2 h4 {
   font-family: "Dancing Script", cursive;
   font-size: 24px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.8s;
 }
 
 .section2 p {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
 }
 @media screen and (min-width: 512px) {
   .layout2 {
@@ -336,26 +332,9 @@
     align-items: flex-end;
   }
 }
-.section2:hover h1,
-.section2:hover h2,
-.section2:hover h3,
-.section2:hover h4,
-.section2:hover p,
-.section2:hover h1,
-.section2:hover .imgputra img,
-.section2:hover .imgputri img {
-  transform: translateY(0);
-  transform: translateX(0);
-  opacity: 1;
-}
 
 /* section3 */
 /* countdown */
-.section3:hover .counter h4,
-.section3:hover h1 {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 .Countdown {
   display: flex;
@@ -367,12 +346,6 @@
   flex-direction: column;
   padding: 15px;
   font-family: "Oswald", sans-serif;
-}
-.counter h4 {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.5s;
 }
 
 .section3 {
@@ -391,10 +364,6 @@
 
 .section3 h1 {
   font-family: "Dancing Script", cursive;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
 }
 
 /* section4 */
@@ -408,36 +377,22 @@
   background-repeat: no-repeat;
 
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   /* color: white; */
 }
 .section4 h1 {
   font-size: 72px;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.5s;
 }
 
 .section4 h4 {
   font-size: 20px;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.6s;
 }
-.mmyy h4 {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.7s;
+
+.SesiFalse {
+  display: none;
 }
-.dd {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 512px) {
+
+@media screen and (max-width: 512px) {
   .date {
     display: flex;
     justify-content: center;
@@ -449,19 +404,11 @@
   font-size: 28px;
   font-family: "Dancing Script", cursive;
   padding: 15px;
-  opacity: 0;
-  transform: translateY(50%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.8s;
 }
 
 .date h2 {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.8s;
 }
 .lokasi {
   padding-top: 10vh;
@@ -470,42 +417,22 @@
 }
 .lokasi h3 {
   font-weight: bold;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
-}
-.lokasi p {
-  opacity: 0;
-  transform: translateY(50%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
-}
-
-.section4 .btn {
-  opacity: 0;
-
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 1s;
-}
-
-.section4:hover h1,
-.section4:hover h2,
-.section4:hover h3,
-.section4:hover h4,
-.section4:hover .mmyy h4,
-.section4:hover .date h1,
-.section4:hover .date h2,
-.section4:hover .lokasi h3,
-.section4:hover .lokasi p,
-.section4:hover .btn {
-  transform: translateY(0);
-  transform: translateX(0);
-  opacity: 1;
 }
 
 /* section5 */
-
+@media only screen and (max-width: 512px) {
+  .img-grid {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto !important;
+    grid-gap: 2vmin;
+    margin-top: 30px;
+  }
+}
 .section5 {
   display: flex;
   flex-direction: column;
@@ -515,8 +442,13 @@
   background-repeat: no-repeat;
 
   background-position: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
+.section5:active,
+.section5:hover {
+  border: 2px solid blue;
+}
+
 .img-grid {
   position: relative;
   height: auto;
@@ -540,28 +472,20 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0;
-  /* filter: brightness(0.5) grayscale(100); */
-  border-radius: 2px;
-  transition: 0.3s ease-in-out;
 }
 
 .img-wrap:first-child {
   grid-column-start: span 1;
   grid-row-start: span 2;
-  opacity: 0;
-  transition: 1s ease-in-out;
 }
 
-.img-wrap:nth-child(2n + 3) {
+.img-wrap:nth-child(3) {
+  grid-column-start: span 1;
   grid-row-start: span 2;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
 }
-.section5:hover .img-wrap img,
-.section5:hover .img-wrap:first-child,
-.section5:hover .img-wrap:nth-child(2n + 3) {
-  opacity: 1;
+
+.img-wrap:nth-child(2n + 7) {
+  grid-row-start: span 2;
 }
 
 /* color: white; */
@@ -579,17 +503,11 @@
 }
 .section6 h2 {
   font-family: "Dancing Script", cursive;
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.5s;
 }
 
 .section6 p {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.6s;
 }
 
 .protap-warp {
@@ -602,23 +520,6 @@
   max-width: 40vw;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  opacity: 0;
-  transition-delay: 0.7s;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  /* transition-delay: 1s; */
-}
-.protap-warp img {
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  transition-delay: 0.7s;
-}
-.section6:hover h2,
-.section6:hover p,
-.section6:hover .protap-warp h4,
-.section6:hover .protap-warp img {
-  transform: translateY(0);
-  transform: translateX(0);
-  opacity: 1;
 }
 
 /* section7  */
@@ -651,3 +552,25 @@
 .modal-body img {
   width: 100%;
 }
+
+.box {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.img-preview {
+  overflow: hidden;
+}
+
+.my-modal {
+  height: 90vw;
+  max-height: 90vw;
+}
+
+/* .UploadImage {
+  position: absolute;
+  padding: 30px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+} */

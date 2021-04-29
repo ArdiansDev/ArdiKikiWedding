@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import fire from "../fire";
 
 import moment from "moment";
-export default function Countdown() {
+export default function Countdown(props) {
   const [timerdays, settimerdays] = useState();
   const [timerhours, settimerhours] = useState();
   const [timerminutes, settimerminutes] = useState();
@@ -17,12 +17,16 @@ export default function Countdown() {
     }
   });
 
+  const innerFunction = useCallback(() => {
+    startimer();
+  }, [waktu]);
+
   useEffect(() => {
     async function fetchMyAPI() {
       fire.auth().onAuthStateChanged((user) => {
         if (user) {
           const nameRef = fire.database().ref(user.uid).child("Undangan");
-          nameRef.on("value", (snapshot) => {
+          nameRef.once("value", (snapshot) => {
             const title = snapshot.val();
             if (!title) {
             } else {
@@ -41,12 +45,12 @@ export default function Countdown() {
     }
     startimer();
     fetchMyAPI();
-  }, [waktu, Akad, Uid]);
-  const countDownDate = waktu;
+  }, [waktu, Akad]);
+  // const countDownDate = waktu;
   const startimer = () => {
     setInterval(() => {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+      const distance = waktu - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
@@ -63,7 +67,7 @@ export default function Countdown() {
       }
     }, 1000);
   };
-
+  innerFunction();
   return (
     <div className="Countdown">
       <div className="counter">

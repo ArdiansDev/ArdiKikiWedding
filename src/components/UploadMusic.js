@@ -7,7 +7,6 @@ export default function UploadMusic(props) {
   fire.auth().onAuthStateChanged((user) => {
     if (user) {
       setUid(user.uid);
-      console.log(user.uid);
     } else {
     }
   });

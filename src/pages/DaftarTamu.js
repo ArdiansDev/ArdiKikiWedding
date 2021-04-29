@@ -30,7 +30,7 @@ function Daftar() {
       } else {
       }
     });
-  }, [Uid]);
+  }, []);
 
   return (
     <Container>

@@ -6,8 +6,15 @@ import Button from "react-bootstrap/Button";
 import QRCode from "qrcode";
 import Modal from "react-bootstrap/Modal";
 import { useHistory } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 export default function Undangan(props) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const [Uid, setUid] = useState("");
   fire.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -63,6 +70,12 @@ export default function Undangan(props) {
   const [Img11, setImg11] = useState();
   //music
   const [Music, setMusic] = useState();
+  // sesi
+  const [sesi0, setSesi0] = useState(false);
+  const [sesi1, setSesi1] = useState(false);
+  const [sesi2, setSesi2] = useState(false);
+  const [sesi3, setSesi3] = useState(false);
+  const [sesi4, setSesi4] = useState(false);
 
   const options = {
     // weekday: "long",
@@ -116,7 +129,7 @@ export default function Undangan(props) {
             .child("Name")
             .child(nameid);
           nameRef.update({
-            hadir: !data.hadir,
+            konfirmasi: !data.konfirmasi,
           });
         } else {
         }
@@ -230,6 +243,11 @@ export default function Undangan(props) {
             } else {
               setData(names);
               setName(names.title);
+              setSesi0(names.sesi0);
+              setSesi1(names.sesi1);
+              setSesi2(names.sesi2);
+              setSesi3(names.sesi3);
+              setSesi4(names.sesi4);
             }
           });
         } else {
@@ -249,41 +267,38 @@ export default function Undangan(props) {
 
   return (
     <div>
-      {/* <img onClick={handleShow1} src={QR} alt="" /> */}
-      <Modal
-        // size="s"
-        // aria-labelledby="contained-modal-title-vcenter"
-        // centered
-        show={show1}
-        onHide={handleClose1}
-      >
-        {/* <Modal.Body> */}
+      <Modal show={show1} onHide={handleClose1}>
+        <div className="Section0">
+          <div className="coverdepan">
+            <div
+              style={{
+                backgroundImage: `url(${Img0})`,
+              }}
+              className="GambarDepan"
+            ></div>
+            <div className="coverdepanText">
+              <h2>Dear </h2>
+              <h1>{Name}</h1>
+              <h4>Plus One</h4>
+              <br />
+              <h3>You are invited </h3>
+              <h4>The wedding of </h4>
+              <h2>
+                {NamaPa} & {NamaPi}
+              </h2>
 
-        <div
-          className="coverdepan"
-          style={{
-            backgroundImage: `url(${Img0})`,
-          }}
-        >
-          <h2>Dear </h2>
-          <h1>{Name}</h1>
-          <h4>Plus One</h4>
-          <br />
-          <h3>You are invited </h3>
-          <h4>The wedding of </h4>
-          <h2>
-            {NamaPa} & {NamaPi}
-          </h2>
-
-          <Button variant="info" onClick={playMusic}>
-            Open Invitation
-          </Button>
-          <br />
-          <br />
-          <br />
-          <p>
-            WeddingKik by:<a href="https://www.w3schools.com">(ardiansy.dev)</a>
-          </p>
+              <Button variant="info" onClick={playMusic}>
+                Open Invitation
+              </Button>
+              <br />
+              <br />
+              <br />
+              <p>
+                WeddingKik by:
+                <a href="https://www.ardians.dev">(ardians.dev)</a>
+              </p>
+            </div>
+          </div>
         </div>
       </Modal>
       <div
@@ -294,39 +309,39 @@ export default function Undangan(props) {
       >
         <div className="body">
           <img width="45vw" src={Img2} alt="" />
-          <h1>
+          <h1 data-aos="fade-up">
             {NamaPa} & {NamaPi}
           </h1>
-          <h2>WEDDING</h2>
+          <h2 data-aos="fade-up">WEDDING</h2>
           <h3>{event}</h3>
         </div>
       </div>
       <div className="section2">
         <div>
-          <h2>We are Getting Married</h2>
-          <h3>
+          <h2 data-aos="fade-up">We are Getting Married</h2>
+          <h3 data-aos="fade-up">
             Love is not just about finding the right person, but creating right
             relationship.
           </h3>
-          <h3>
+          <h3 data-aos="fade-up">
             {" "}
             It's not about how much love you have in the beginning, but how much
             love you built till the end.{" "}
           </h3>
-          <h3>- Anonymous -</h3>
+          <h3 data-aos="fade-up">- Anonymous -</h3>
           <div className="layout2">
             <div className="imgputri">
-              <img src={Img3} alt="" />
-              <h4>{NamaPiLkp}</h4>
-              <p>Putri pertama dari </p>
-              <p>{OrtuPi} </p>
+              <img data-aos="fade-right" src={Img3} alt="" />
+              <h4 data-aos="fade-up">{NamaPiLkp}</h4>
+              <p data-aos="fade-up">Putri pertama dari </p>
+              <p data-aos="fade-up">{OrtuPi} </p>
             </div>
-            <h1>&</h1>
+            <h1 data-aos="fade-up">&</h1>
             <div className="imgputra">
-              <img src={Img4} alt="" />
-              <h4>{NamaPaLkp}</h4>
-              <p>Putra pertama dari </p>
-              <p>{OrtuPa}</p>
+              <img data-aos="fade-left" src={Img4} alt="" />
+              <h4 data-aos="fade-up">{NamaPaLkp}</h4>
+              <p data-aos="fade-up">Putra pertama dari </p>
+              <p data-aos="fade-up">{OrtuPa}</p>
             </div>
           </div>
         </div>
@@ -338,7 +353,7 @@ export default function Undangan(props) {
         }}
       >
         <div>
-          <h1>{event}</h1>
+          <h1 data-aos="fade-up">{event}</h1>
           <img
             height="200"
             src="https://wedew.id/themes/minimal/assets/images/save-the-date.gif"
@@ -349,10 +364,14 @@ export default function Undangan(props) {
       </div>
       <div className="section4">
         <div>
-          <h4>{new Date(Waktu).toLocaleDateString("id-ID", Weekday)}</h4>
-          <div className="dd">
-            <h1>{new Date(Waktu).toLocaleDateString("id-ID", Day)}</h1>
-            <div className="mmyy">
+          <h4 data-aos="fade-down">
+            {new Date(Waktu).toLocaleDateString("id-ID", Weekday)}
+          </h4>
+          <div className="dd" style={{ alignItems: "center", display: "flex" }}>
+            <h1 data-aos="fade-right">
+              {new Date(Waktu).toLocaleDateString("id-ID", Day)}
+            </h1>
+            <div data-aos="fade-left">
               <h4>{new Date(Waktu).toLocaleDateString("id-ID", Month)}</h4>
               <h4>{new Date(Waktu).toLocaleDateString("id-ID", Year)}</h4>
             </div>
@@ -360,26 +379,26 @@ export default function Undangan(props) {
         </div>
 
         <div className="date">
-          <div>
-            <h1>Akad Nikah</h1>
-            <h2>{Akad}-End</h2>
+          <div className={`${sesi0 ? "" : "SesiFalse"}`}>
+            <h1 data-aos="fade-up">Akad Nikah</h1>
+            <h2 data-aos="fade-down">{Akad}-End</h2>
           </div>
 
-          <div>
+          <div data-aos="fade-up" className={`${sesi1 ? "" : "SesiFalse"}`}>
             <h1>Resepsi 1</h1>
             <h2>
               {Resepsi1}-{Resepsi1End}
             </h2>
           </div>
 
-          <div>
+          <div data-aos="fade-up" className={`${sesi2 ? "" : "SesiFalse"}`}>
             <h1>Resepsi 2</h1>
             <h2>
               {Resepsi2}-{Resepsi2End}
             </h2>
           </div>
 
-          <div>
+          <div data-aos="fade-up" className={`${sesi3 ? "" : "SesiFalse"}`}>
             <h1>Resepsi 3</h1>
             <h2>
               {Resepsi3}-{Resepsi3End}
@@ -387,40 +406,43 @@ export default function Undangan(props) {
           </div>
         </div>
         <div className="lokasi">
-          <h3>{NamaVenue}</h3>
-          <p>{AlamatVenue}</p>
+          <h3 data-aos="fade-up">{NamaVenue}</h3>
+          <p data-aos="fade-down">{AlamatVenue}</p>
         </div>
-        <div>
-          <Button variant="primary">View Map</Button>
-        </div>
+        <a href={LinkMaps} target="_blank" data-aos="fade-up">
+          <Button variant="success">
+            <LocationOnIcon />
+            View Map
+          </Button>
+        </a>
       </div>
 
       <div className="section5">
         <div className="img-grid">
           <div className="img-wrap">
-            <img src={Img5} alt="" />
+            <img data-aos="fade-up" src={Img5} alt="" />
           </div>
           <div className="img-wrap">
-            <img src={Img6} alt="" />
+            <img data-aos="fade-down" src={Img6} alt="" />
           </div>
           <div className="img-wrap">
-            <img src={Img7} alt="" />
+            <img data-aos="fade-left" src={Img7} alt="" />
           </div>
           <div className="img-wrap">
-            <img src={Img8} alt="" />
+            <img data-aos="fade-right" src={Img8} alt="" />
           </div>
           <div className="img-wrap">
-            <img src={Img9} alt="" />
+            <img data-aos="fade-up" src={Img9} alt="" />
           </div>
           <div className="img-wrap">
-            <img src={Img10} alt="" />
+            <img data-aos="fade-down" src={Img10} alt="" />
           </div>
         </div>
       </div>
 
       <div className="section6">
-        <h2>Panduan Acara</h2>
-        <p>
+        <h2 data-aos="fade-down">Panduan Acara</h2>
+        <p data-aos="fade-up">
           Sehubungan dengan kondisi pandemi COVID 19, kami sekeluarga
           menindaklanjuti peraturan mengenai pembatasan tamu undangan. Oleh
           karena itu, mohon untuk dapat mengikuti panduan acara sebagai berikut
@@ -429,45 +451,46 @@ export default function Undangan(props) {
 
         <div className="protap">
           <div className="protap-warp">
-            <img src="./../img/2.svg" alt="" />
-            <h4>Undangan ini hanya berlaku untuk 2 ORANG.</h4>
+            <img data-aos="fade-right" src="./../img/2.svg" alt="" />
+            <h4 data-aos="fade-left">
+              Undangan ini hanya berlaku untuk 2 ORANG.
+            </h4>
           </div>
           <div className="protap-warp">
-            <img src="./../img/6.svg" alt="" />
-            <h4>Mencuci tangan dengan sabun</h4>
+            <img data-aos="fade-right" src="./../img/6.svg" alt="" />
+            <h4 data-aos="fade-left">Mencuci tangan dengan sabun</h4>
           </div>
           <div className="protap-warp">
-            <img src="./../img/1.svg" alt="" />
-            <h4>Menggunakan Hand Sanitizer</h4>
+            <img data-aos="fade-right" src="./../img/1.svg" alt="" />
+            <h4 data-aos="fade-left">Menggunakan Hand Sanitizer</h4>
           </div>
           <div className="protap-warp">
-            <img src="./../img/3.svg" alt="" />
-            <h4>Menggunakan Masker</h4>
+            <img data-aos="fade-right" src="./../img/3.svg" alt="" />
+            <h4 data-aos="fade-left">Menggunakan Masker</h4>
           </div>
           <div className="protap-warp">
-            <img src="./../img/4.svg" alt="" />
-            <h4>Tidak bersentuhan</h4>
+            <img data-aos="fade-right" src="./../img/4.svg" alt="" />
+            <h4 data-aos="fade-left">Tidak bersentuhan</h4>
           </div>
           <div className="protap-warp">
-            <img src="./../img/5.svg" alt="" />
-            <h4>Menjaga jarak</h4>
+            <img data-aos="fade-right" src="./../img/5.svg" alt="" />
+            <h4 data-aos="fade-left">Menjaga jarak</h4>
           </div>
         </div>
       </div>
       <div className="section7">
-        <div className={`${data.hadir ? "rsvp" : ""}`}>
-          <h3>Apakah anda akan hadir</h3>
-          <Button variant="warning" onClick={Hadir}>
+        <div className={`${data.konfirmasi ? "rsvp" : ""}`}>
+          <h3 data-aos="fade-down">Apakah anda akan hadir</h3>
+          <Button data-aos="fade-up" variant="warning" onClick={Hadir}>
             Konfirmasi
           </Button>
         </div>
-        <div className={`${data.hadir ? "" : "rsvp"}`}>
+        <div className={`${data.konfirmasi ? "" : "rsvp"}`}>
           <h3>Terimakasih sudah melakukan konfirmasi</h3>
           <p>Tunjukan QR ini saat memasuki Lokasi</p>
           <img onClick={handleShow} src={QR} alt="" />
           <p>Tekan gambar untuk memperbesar</p>
           <Modal
-            // size="s"
             aria-labelledby="contained-modal-title-vcenter"
             centered
             show={show}

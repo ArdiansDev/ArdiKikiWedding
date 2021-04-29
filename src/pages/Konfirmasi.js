@@ -83,7 +83,7 @@ function Konfirmasi() {
           />
         </Col>
       </Form.Row>
-      {FilteredKonfirm.map((name, idx) => (
+      {FilteredName.map((name, idx) => (
         <Nama key={idx} name={name} />
       ))}
     </Container>

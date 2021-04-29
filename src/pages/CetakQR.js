@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fire from "../fire";
 import QR from "./../components/QR";
-
+import PrintIcon from "@material-ui/icons/Print";
 import { CardDeck, Container } from "react-bootstrap";
 
 function CetakQR() {
@@ -47,6 +47,7 @@ function CetakQR() {
         <br />
 
         <h3>WeddingKik! QR</h3>
+        <PrintIcon className="PrintIcon" onClick={print} />
         <br />
         <CardDeck>
           {filteredName.map((name, idx) => (

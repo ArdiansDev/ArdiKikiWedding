@@ -3,7 +3,7 @@ import fire from "../fire";
 import AspectRatioIcon from "@material-ui/icons/AspectRatio";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Button from "@material-ui/core/Button";
-export default function Home() {
+export default function LayarSapa() {
   const [Name, setName] = useState([]);
   const handle = useFullScreenHandle();
   let today = new Date();
@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="Home">
+    <div className="LayarSapa">
       <FullScreen handle={handle}>
         <h1>Selamat datang</h1>
 

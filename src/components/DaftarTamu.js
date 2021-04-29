@@ -9,7 +9,6 @@ export default function Nama({ name }) {
   fire.auth().onAuthStateChanged((user) => {
     if (user) {
       setUid(user.uid);
-      console.log(user.uid);
     } else {
     }
   });
