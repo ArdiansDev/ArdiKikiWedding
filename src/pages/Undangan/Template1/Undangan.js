@@ -333,7 +333,7 @@ export default function Undangan(props) {
             <div className="imgputri">
               <img data-aos="fade-right" src={Img3} alt="" />
               <h4 data-aos="fade-up">{NamaPiLkp}</h4>
-              <p data-aos="fade-up">Putri pertama dari </p>
+              <p data-aos="fade-up">Putri kedua dari </p>
               <p data-aos="fade-up">{OrtuPi} </p>
             </div>
             <h1 data-aos="fade-up">&</h1>

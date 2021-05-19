@@ -145,7 +145,7 @@ export default function Couple(props) {
             <div className="imgputri">
               <img src={props.images.Img3} alt="" />
               <h4>{props.data.NamaPiLkp}</h4>
-              <p>Putri pertama dari </p>
+              <p>Putri kedua dari </p>
               <p>{props.data.OrtuPi} </p>
             </div>
             <h1>&</h1>

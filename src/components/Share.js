@@ -106,6 +106,7 @@ Wassalamu'alaikum Wr. Wb.
       } else {
       }
     });
+    handleClose();
   };
   const history = useHistory();
   const openNewtab = () => {
@@ -177,7 +178,7 @@ Wassalamu'alaikum Wr. Wb.
             </DialogContent>
             <Button
               style={{ display: "flex", alignSelf: "center" }}
-              onClick={(Sesi, handleClose)}
+              onClick={Sesi}
               color="primary"
             >
               <SaveIcon /> Save
