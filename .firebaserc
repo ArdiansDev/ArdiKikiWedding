@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "nopal-8154e"
+  },
+  "targets": {
+    "weddingkik": {
+      "hosting": {
+        "WeddingKik": [
+          "weddingkik-92f96"
+        ]
+      }
+    }
   }
 }

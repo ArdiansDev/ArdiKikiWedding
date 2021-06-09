@@ -23,23 +23,21 @@ export default function Countdown(props) {
 
   useEffect(() => {
     async function fetchMyAPI() {
-      fire.auth().onAuthStateChanged((user) => {
-        if (user) {
-          const nameRef = fire.database().ref(user.uid).child("Undangan");
-          nameRef.once("value", (snapshot) => {
-            const title = snapshot.val();
-            if (!title) {
-            } else {
-              setWaktu(
-                moment(
-                  `${title.Waktu} +${title.Akad}`,
-                  "YYYY-MM-DD HH:mm"
-                ).valueOf()
-              );
-              setAkad(title.Akad);
-            }
-          });
+      const nameRef = fire
+        .database()
+        .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+        .child("Undangan");
+      nameRef.once("value", (snapshot) => {
+        const title = snapshot.val();
+        if (!title) {
         } else {
+          setWaktu(
+            moment(
+              `${title.Waktu} +${title.Akad}`,
+              "YYYY-MM-DD HH:mm"
+            ).valueOf()
+          );
+          setAkad(title.Akad);
         }
       });
     }

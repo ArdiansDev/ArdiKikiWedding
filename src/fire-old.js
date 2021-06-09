@@ -4,13 +4,14 @@ import "firebase/auth";
 // replace this with your credentials
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCMlLVVCe2rhHo4OgVQBdPU9h-FEmtC55s",
-  authDomain: "nopal-8154e.firebaseapp.com",
-  projectId: "nopal-8154e",
-  storageBucket: "nopal-8154e.appspot.com",
-  messagingSenderId: "265732549211",
-  appId: "1:265732549211:web:4459400d2dc39b6cdd6d7e",
-  measurementId: "G-ZJXWQJEVS2",
+  apiKey: "AIzaSyAYXNm8_v3z_4pDyBDnOdfLF7zmN4wvgNs",
+  authDomain: "weddingkik-92f96.firebaseapp.com",
+  databaseURL:
+    "https://weddingkik-92f96-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "weddingkik-92f96",
+  storageBucket: "weddingkik-92f96.appspot.com",
+  messagingSenderId: "758591616110",
+  appId: "1:758591616110:web:8c3d787ad0c14c2462627f",
 };
 // ----------------------------------------//
 const fire = firebase.initializeApp(firebaseConfig);

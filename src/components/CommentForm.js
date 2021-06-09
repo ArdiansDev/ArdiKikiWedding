@@ -21,7 +21,7 @@ export default function CommentForm(props) {
   };
   const createName = (e) => {
     e.preventDefault();
-    const nameRef = fire.database().ref(Uid).child("Comment");
+    const nameRef = fire.database().ref("ok").child("Comment");
     const name = {
       nama,
       Comment,
@@ -40,7 +40,7 @@ export default function CommentForm(props) {
   });
 
   useEffect(() => {
-    const nameRef = fire.database().ref(Uid).child("Comment");
+    const nameRef = fire.database().ref("ok").child("Comment");
     nameRef.on("value", (snapshot) => {
       const names = snapshot.val();
       const nameList = [];

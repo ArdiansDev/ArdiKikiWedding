@@ -76,6 +76,18 @@ export default function Scanner() {
     });
   };
 
+  const update2 = () => {
+    const todoRef = fire
+      .database()
+      .ref(Uid)
+      .child("Name")
+      .child(scanResultWebCam);
+    todoRef.update({
+      // hadir: true,
+      time: timestamp,
+    });
+  };
+
   const completeTodo = () => {
     fire
       .database()
@@ -92,6 +104,7 @@ export default function Scanner() {
               const Userdata = snapshot.val();
               if (Userdata.hadir == true) {
                 setShow2(true);
+                update2();
               } else {
                 update();
                 HandleNama();

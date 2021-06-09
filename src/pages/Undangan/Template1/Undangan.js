@@ -34,7 +34,7 @@ export default function Undangan(props) {
   const [QR, setQR] = useState("");
   const [data, setData] = useState(false);
   const [Name, setName] = useState([]);
-  // console.log(CommentForm);
+  // console.log(props);
   // detail acara
   const [NamaPa, setNamaPa] = useState();
   const [NamaPi, setNamaPi] = useState();
@@ -56,20 +56,46 @@ export default function Undangan(props) {
   const [LinkMaps, setLinkMaps] = useState();
 
   //  gambar
-  const [Img0, setImg0] = useState();
-  const [Img1, setImg1] = useState();
-  const [Img2, setImg2] = useState();
-  const [Img3, setImg3] = useState();
-  const [Img4, setImg4] = useState();
-  const [Img5, setImg5] = useState();
-  const [Img6, setImg6] = useState();
-  const [Img7, setImg7] = useState();
-  const [Img8, setImg8] = useState();
-  const [Img9, setImg9] = useState();
-  const [Img10, setImg10] = useState();
-  const [Img11, setImg11] = useState();
+  const [Img0, setImg0] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667957/NopalWdding/Img0_bvuphi.jpg"
+  );
+  const [Img1, setImg1] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667955/NopalWdding/Img1_wqh7ob.jpg"
+  );
+  const [Img2, setImg2] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667955/NopalWdding/Img2_wt7lng.jpg"
+  );
+  const [Img3, setImg3] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667951/NopalWdding/Img3_ktm2r8.jpg"
+  );
+  const [Img4, setImg4] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667951/NopalWdding/Img4_pbl7co.jpg"
+  );
+  const [Img5, setImg5] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667958/NopalWdding/Img5_zsbjwt.jpg"
+  );
+  const [Img6, setImg6] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667965/NopalWdding/Img6_vqwap0.jpg"
+  );
+  const [Img7, setImg7] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667963/NopalWdding/Img7_mz0qmp.jpg"
+  );
+  const [Img8, setImg8] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667960/NopalWdding/Img8_jsiqhn.jpg"
+  );
+  const [Img9, setImg9] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667961/NopalWdding/Img9_gmkut8.jpg"
+  );
+  const [Img10, setImg10] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667963/NopalWdding/Img10_ficeph.jpg"
+  );
+  const [Img11, setImg11] = useState(
+    "https://res.cloudinary.com/dcfr2achk/image/upload/v1621667963/NopalWdding/Img11_wjudhn.jpg"
+  );
   //music
-  const [Music, setMusic] = useState();
+  const [Music, setMusic] = useState(
+    "https://res.cloudinary.com/dcfr2achk/video/upload/v1621668081/NopalWdding/music_twztbt.mp3"
+  );
   // sesi
   const [sesi0, setSesi0] = useState(false);
   const [sesi1, setSesi1] = useState(false);
@@ -97,128 +123,111 @@ export default function Undangan(props) {
   };
 
   const Idnaming = () => {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        fire
-          .database()
-          .ref(user.uid)
-          .child("Name")
-          .once("value", function (snapshot) {
-            if (snapshot.hasChild(props.match.params.id)) {
-              setNameid(props.match.params.id);
-            } else {
-              history.push({
-                pathname: `/404/`,
-              });
-            }
+    fire
+      .database()
+      .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+      .child("Name")
+      .once("value", function (snapshot) {
+        if (snapshot.hasChild(props.match.params.id)) {
+          setNameid(props.match.params.id);
+        } else {
+          history.push({
+            pathname: `/404/`,
           });
-      } else {
-      }
-    });
+        }
+      });
   };
 
   const Hadir = () => {
     if (!props.match.params.id) {
       alert("anda tidak terdaftar");
     } else {
-      fire.auth().onAuthStateChanged((user) => {
-        if (user) {
-          const nameRef = fire
-            .database()
-            .ref(user.uid)
-            .child("Name")
-            .child(nameid);
-          nameRef.update({
-            konfirmasi: !data.konfirmasi,
-          });
-        } else {
-        }
+      const nameRef = fire
+        .database()
+        .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+        .child("Name")
+        .child(nameid);
+      nameRef.update({
+        konfirmasi: !data.konfirmasi,
       });
     }
   };
   useEffect(() => {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        const nameRef = fire.database().ref(user.uid).child("Undangan");
-        nameRef.on("value", (snapshot) => {
-          const title = snapshot.val();
+    const nameRef = fire
+      .database()
+      .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+      .child("Undangan");
+    nameRef.on("value", (snapshot) => {
+      const title = snapshot.val();
 
-          if (title === null) {
-            // setImg0("");
-          } else {
-            setNamaPa(title.NamaPa);
-            setNamaPi(title.NamaPi);
-            setNamaPaLkp(title.NamaPaLkp);
-            setNamaPiLkp(title.NamaPiLkp);
-            setOrtuPa(title.OrtuPa);
-            setOrtuPi(title.OrtuPi);
-            setWaktu(title.Waktu);
-            setAkad(title.Akad);
-            setResepsi1(title.Resepsi1);
-            setResepsi2(title.Resepsi2);
-            setResepsi3(title.Resepsi3);
-            setResepsi1End(title.Resepsi1End);
-            setResepsi2End(title.Resepsi2End);
-            setResepsi3End(title.Resepsi3End);
-            setAlamatVenue(title.AlamatVenue);
-            setNamaVenue(title.NamaVenue);
-            setLinkMaps(title.LinkMaps);
-            setEvent(
-              new Date(title.Waktu).toLocaleDateString("id-ID", options)
-            );
-            // setName(names.title);
-          }
-        });
+      if (title === null) {
+        // setImg0("");
       } else {
+        setNamaPa(title.NamaPa);
+        setNamaPi(title.NamaPi);
+        setNamaPaLkp(title.NamaPaLkp);
+        setNamaPiLkp(title.NamaPiLkp);
+        setOrtuPa(title.OrtuPa);
+        setOrtuPi(title.OrtuPi);
+        setWaktu(title.Waktu);
+        setAkad(title.Akad);
+        setResepsi1(title.Resepsi1);
+        setResepsi2(title.Resepsi2);
+        setResepsi3(title.Resepsi3);
+        setResepsi1End(title.Resepsi1End);
+        setResepsi2End(title.Resepsi2End);
+        setResepsi3End(title.Resepsi3End);
+        setAlamatVenue(title.AlamatVenue);
+        setNamaVenue(title.NamaVenue);
+        setLinkMaps(title.LinkMaps);
+        setEvent(new Date(title.Waktu).toLocaleDateString("id-ID", options));
+        // setName(names.title);
       }
     });
   }, []);
-  useEffect(() => {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        const nameRef = fire.database().ref(user.uid).child("images/daily");
-        nameRef.on("value", (snapshot) => {
-          const images = snapshot.val();
 
-          if (images === null) {
-            // setImg0("");
-          } else {
-            setImg0(images.Img0);
-            setImg1(images.Img1);
-            setImg2(images.Img2);
-            setImg3(images.Img3);
-            setImg4(images.Img4);
-            setImg5(images.Img5);
-            setImg6(images.Img6);
-            setImg7(images.Img7);
-            setImg8(images.Img8);
-            setImg9(images.Img9);
-            setImg10(images.Img10);
-            setImg11(images.Img11);
+  // useEffect(() => {
+  //   const nameRef = fire
+  //     .database()
+  //     .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+  //     .child("images/daily");
+  //   nameRef.on("value", (snapshot) => {
+  //     const images = snapshot.val();
 
-            // setName(names.title);
-          }
-        });
-      } else {
-      }
-    });
-  }, []);
-  useEffect(() => {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        const nameRef = fire.database().ref(user.uid).child("music");
-        nameRef.on("value", (snapshot) => {
-          const music = snapshot.val();
+  //     if (images === null) {
+  //       // setImg0("");
+  //     } else {
+  //       setImg0(images.Img0);
+  //       setImg1(images.Img1);
+  //       setImg2(images.Img2);
+  //       setImg3(images.Img3);
+  //       setImg4(images.Img4);
+  //       setImg5(images.Img5);
+  //       setImg6(images.Img6);
+  //       setImg7(images.Img7);
+  //       setImg8(images.Img8);
+  //       setImg9(images.Img9);
+  //       setImg10(images.Img10);
+  //       setImg11(images.Img11);
 
-          if (music === null) {
-          } else {
-            setMusic(music.music);
-          }
-        });
-      } else {
-      }
-    });
-  }, []);
+  //       // setName(names.title);
+  //     }
+  //   });
+  // }, []);
+  // useEffect(() => {
+  //   const nameRef = fire
+  //     .database()
+  //     .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+  //     .child("music");
+  //   nameRef.on("value", (snapshot) => {
+  //     const music = snapshot.val();
+
+  //     if (music === null) {
+  //     } else {
+  //       setMusic(music.music);
+  //     }
+  //   });
+  // }, []);
   const audio = new Audio(Music);
   const playMusic = () => {
     audio.play();
@@ -229,28 +238,24 @@ export default function Undangan(props) {
     if (!props.match.params.id) {
     } else {
       Idnaming();
-      fire.auth().onAuthStateChanged((user) => {
-        if (user) {
-          const nameRef = fire
-            .database()
-            .ref(user.uid)
-            .child("Name/" + nameid);
-          nameRef.on("value", (snapshot) => {
-            const names = snapshot.val();
 
-            if (names === null) {
-              setName("");
-            } else {
-              setData(names);
-              setName(names.title);
-              setSesi0(names.sesi0);
-              setSesi1(names.sesi1);
-              setSesi2(names.sesi2);
-              setSesi3(names.sesi3);
-              setSesi4(names.sesi4);
-            }
-          });
+      const nameRef = fire
+        .database()
+        .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+        .child("Name/" + nameid);
+      nameRef.on("value", (snapshot) => {
+        const names = snapshot.val();
+
+        if (names === null) {
+          setName("");
         } else {
+          setData(names);
+          setName(names.title);
+          setSesi0(names.sesi0);
+          setSesi1(names.sesi1);
+          setSesi2(names.sesi2);
+          setSesi3(names.sesi3);
+          setSesi4(names.sesi4);
         }
       });
     }

@@ -22,6 +22,7 @@ export default function Undangan(props) {
     } else {
     }
   });
+
   // const nameid = props.match.params.id;
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(true);
@@ -34,7 +35,7 @@ export default function Undangan(props) {
   const [QR, setQR] = useState("");
   const [data, setData] = useState(false);
   const [Name, setName] = useState([]);
-  // console.log(CommentForm);
+  console.log(props.params);
   // detail acara
   const [NamaPa, setNamaPa] = useState();
   const [NamaPi, setNamaPi] = useState();

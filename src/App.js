@@ -40,7 +40,8 @@ function App() {
               <PrivateRoute path="/Build" exact component={Build} />
               <Route path="/login" exact component={Login} />
               <Route path="/signup" exact component={Signup} />
-              <Route path="/:uid/:id" exact component={Undangan} />
+              <Route path="/:uid/:id" component={Undangan} />
+
               <Route path="/imgcrop" exact component={Countdown} />
 
               {/* <Route path="/Undangan/:uid" exact component={Undangan} /> */}
