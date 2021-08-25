@@ -58,7 +58,7 @@ Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di
 
 Berikut link untuk info lengkap dari acara kami
 
-${window.location.origin + `/${LinkUndangan}/${name.id}`}
+${window.location.origin + `/${name.id}`}
 
 Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
 
@@ -110,10 +110,7 @@ Wassalamu'alaikum Wr. Wb.
   };
   const history = useHistory();
   const openNewtab = () => {
-    window.open(
-      window.location.origin + `/${LinkUndangan}/${name.id}`,
-      "_blank"
-    );
+    window.open(window.location.origin + `/${name.id}`, "_blank");
   };
 
   return (
@@ -127,7 +124,7 @@ Wassalamu'alaikum Wr. Wb.
               className="PrintIcon"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  window.location.origin + `/${LinkUndangan}/${name.id}`
+                  window.location.origin + `/${name.id}`
                 );
               }}
             />
