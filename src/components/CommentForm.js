@@ -6,18 +6,15 @@ import Button from "react-bootstrap/Button";
 
 export default function CommentForm(props) {
   const [Name, setName] = useState([]);
-  const [nama, setnama] = useState("anonim");
+  const [nama, setnama] = useState("");
   const [Comment, setComment] = useState("");
   const [Uid, setUid] = useState("ok");
 
   const handleOnChangeComment = (e) => {
-    if (props.nama == null) {
-      // console.log("null");
-      setnama("Anonim");
-    } else {
-      setComment(e.target.value);
-      setnama(props.nama);
-    }
+    setComment(e.target.value);
+  };
+  const handleOnChangeName = (e) => {
+    setnama(e.target.value);
   };
   const createName = (e) => {
     e.preventDefault();
@@ -54,33 +51,50 @@ export default function CommentForm(props) {
   }, [Uid]);
 
   return (
-    <div className="">
-      <form onSubmit={createName}>
-        <Form.Control
+    <div>
+      <form onSubmit={createName} className="commentArea">
+        <h1>Name:*</h1>
+        <input
+          as="textarea"
+          rows={1}
+          className="nameBox"
+          // style={{ width: "45vw" }}
+          type="text"
+          onChange={handleOnChangeName}
+          onSubmit={createName}
+          required
+          value={nama}
+          placeholder=""
+        />
+        <br></br>
+        <h1>Wishes:*</h1>
+        <input
           as="textarea"
           rows={3}
-          style={{ width: "45vw" }}
+          className="commentBox"
+          // style={{ width: "45vw" }}
           type="text"
           onChange={handleOnChangeComment}
           onSubmit={createName}
           required
           value={Comment}
-          placeholder="Comment"
+          placeholder=""
         />
-        <br></br>
 
         <br></br>
-        <Button variant="success" type="submit">
-          Add Comment
-        </Button>
+        <button className="sendBtn" type="submit">
+          Send
+        </button>
       </form>
       <br></br>
-      {Name.map((name, idx) => (
-        <div key={idx} className="komentar">
-          <h5>{name.nama}</h5>
-          <p>{name.Comment}</p>
-        </div>
-      ))}
+      <div className="komentar">
+        {Name.map((name, idx) => (
+          <div key={idx}>
+            <h5>{name.nama}</h5>
+            <p>{name.Comment}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

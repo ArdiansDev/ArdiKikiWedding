@@ -14,7 +14,9 @@ import { AuthProvider } from "./components/AuthContext";
 import Konfirmasi from "./pages/Konfirmasi";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import Undangan from "./pages/Undangan/Template1/Undangan";
+import Undangan from "./pages/Undangan/Template1/UndanganVip";
+import UndanganUmum from "./pages/Undangan/Template1/UndanganUmum";
+
 import Notfound from "./pages/404";
 import Build from "./pages/Build";
 import Signup from "./pages/SignUp";
@@ -31,7 +33,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute path="/" exact component={LayarSapa} />
+              <PrivateRoute path="/home" exact component={LayarSapa} />
               <PrivateRoute path="/Scan" exact component={Scan} />
               <PrivateRoute path="/konfirmasi" exact component={Konfirmasi} />
               <PrivateRoute path="/CetakQR" exact component={CetakQR} />
@@ -40,7 +42,8 @@ function App() {
               <PrivateRoute path="/Build" exact component={Build} />
               <Route path="/login" exact component={Login} />
               <Route path="/signup" exact component={Signup} />
-              <Route path="/:uid/:id" component={Undangan} />
+              <Route path="/" component={UndanganUmum} />
+              <Route path="/:id" component={Undangan} />
 
               <Route path="/imgcrop" exact component={Countdown} />
 

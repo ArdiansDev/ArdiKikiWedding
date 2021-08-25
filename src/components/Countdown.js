@@ -7,7 +7,7 @@ export default function Countdown(props) {
   const [timerhours, settimerhours] = useState();
   const [timerminutes, settimerminutes] = useState();
   const [timerseconds, settimerseconds] = useState();
-  const [waktu, setWaktu] = useState("");
+  // const [waktu, setWaktu] = useState("");
   const [Akad, setAkad] = useState("");
   const [Uid, setUid] = useState("");
   fire.auth().onAuthStateChanged((user) => {
@@ -17,34 +17,39 @@ export default function Countdown(props) {
     }
   });
 
-  const innerFunction = useCallback(() => {
-    startimer();
-  }, [waktu]);
+  // const innerFunction = useCallback(() => {
+  //   startimer();
+  // }, [waktu]);
 
-  useEffect(() => {
-    async function fetchMyAPI() {
-      const nameRef = fire
-        .database()
-        .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
-        .child("Undangan");
-      nameRef.once("value", (snapshot) => {
-        const title = snapshot.val();
-        if (!title) {
-        } else {
-          setWaktu(
-            moment(
-              `${title.Waktu} +${title.Akad}`,
-              "YYYY-MM-DD HH:mm"
-            ).valueOf()
-          );
-          setAkad(title.Akad);
-        }
-      });
-    }
-    startimer();
-    fetchMyAPI();
-  }, [waktu, Akad]);
+  // useEffect(() => {
+  //   async function fetchMyAPI() {
+  //     const nameRef = fire
+  //       .database()
+  //       .ref("KMFwgvHGWeQjBy76SZCbLLE6Jy82")
+  //       .child("Undangan");
+  //     nameRef.once("value", (snapshot) => {
+  //       const title = snapshot.val();
+  //       if (!title) {
+  //       } else {
+  //         setWaktu(
+  //           moment(
+  //             `${title.Waktu} +${title.Akad}`,
+  //             "YYYY-MM-DD HH:mm"
+  //           ).valueOf()
+  //         );
+  //         setAkad(title.Akad);
+  //       }
+  //     });
+  //   }
+  //   startimer();
+  //   fetchMyAPI();
+  // }, [waktu, Akad]);
   // const countDownDate = waktu;
+  useEffect(() => {
+    startimer();
+  }, []);
+
+  const waktu = moment(`2021-10-02 + 08:00}`, "YYYY-MM-DD HH:mm").valueOf();
   const startimer = () => {
     setInterval(() => {
       const now = new Date().getTime();
@@ -65,24 +70,24 @@ export default function Countdown(props) {
       }
     }, 1000);
   };
-  innerFunction();
+  // innerFunction();
   return (
     <div className="Countdown">
       <div className="counter">
         <h4>{timerdays}</h4>
-        <h4>Hari</h4>
+        <h4>Day</h4>
       </div>
       <div className="counter">
         <h4>{timerhours}</h4>
-        <h4>Jam</h4>
+        <h4>Hrs</h4>
       </div>
       <div className="counter">
         <h4>{timerminutes}</h4>
-        <h4>Menit</h4>
+        <h4>Min</h4>
       </div>
       <div className="counter">
         <h4>{timerseconds}</h4>
-        <h4>Detik</h4>
+        <h4>Sec</h4>
       </div>
     </div>
   );
