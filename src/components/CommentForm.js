@@ -68,9 +68,8 @@ export default function CommentForm(props) {
         />
         <br></br>
         <h1>Wishes:*</h1>
-        <input
-          as="textarea"
-          rows={3}
+        <textarea
+          rows={5}
           className="commentBox"
           // style={{ width: "45vw" }}
           type="text"

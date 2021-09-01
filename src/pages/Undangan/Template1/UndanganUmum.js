@@ -94,7 +94,7 @@ export default function UndanganUmum(props) {
       >
         {/* <div className="body"> */}
         <h3 data-aos="fade-up">SAVE THE DATE</h3>
-        <img width="45vw" src={bungadepan} alt="" />
+        <img data-aos="fade-up" width="45vw" src={bungadepan} alt="" />
         <h2 data-aos="fade-up">The Wedding of</h2>
         <h1 data-aos="fade-up">
           {NamaPa} & {NamaPi}
@@ -163,7 +163,7 @@ export default function UndanganUmum(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <div>
+        <div data-aos="fade-up">
           <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
           <Countdown />
         </div>
@@ -177,7 +177,7 @@ export default function UndanganUmum(props) {
           </h1>
         </div>
         <div className="Youtube">
-          <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />;
+          <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />
         </div>
         <div>
           <h2 data-aos="fade-up">Sabtu, 2 Oktober 2021</h2>

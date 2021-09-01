@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
 .App {
   text-align: center;
 }
@@ -665,6 +666,7 @@
   width: 277px;
   height: 29px;
   background: #fff9f3;
+  padding-left: 14px;
 }
 
 .commentBox {
@@ -673,7 +675,7 @@
   border-radius: 20px;
   color: #b75c5c;
   width: 277px;
-  height: 148px;
+  padding: 14px;
   background: #fff9f3;
 }
 
