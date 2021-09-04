@@ -124,21 +124,7 @@ export default function Undangan1(props) {
           </div>
         </div>
       </Modal>
-      <div
-        className="section1"
-        style={{
-          backgroundImage: `url(${bgOpen})`,
-        }}
-      >
-        {/* <div className="body"> */}
-        <h3 data-aos="fade-up">SAVE THE DATE</h3>
-        <img data-aos="zoom-in" width="45vw" src={bungadepan} alt="" />
-        <h2 data-aos="fade-up">The Wedding of</h2>
-        <h1 data-aos="fade-up">
-          {NamaPa} & {NamaPi}
-        </h1>
-        <br />
-      </div>
+
       <div
         className="section2"
         style={{
