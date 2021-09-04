@@ -131,7 +131,6 @@ export default function Undangan1(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <img data-aos="zoom-in" className="bunga" src={bungaatas} alt="" />
         <div className="bgSection2">
           <div className="text">
             <img src={Bismilah} alt="" />
