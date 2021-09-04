@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import fire from "./../fire";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 

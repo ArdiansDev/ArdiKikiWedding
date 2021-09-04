@@ -10,12 +10,7 @@ import bgOpen from "./../../../img/bgOpen.png";
 import bungaatas from "./../../../img/bungaatas.png";
 import bungabawah from "./../../../img/bungabawah.png";
 import Bismilah from "./../../../img/Bismilah.png";
-import vec1 from "./../../../img/1.svg";
-import vec2 from "./../../../img/2.svg";
-import vec3 from "./../../../img/3.svg";
-import vec4 from "./../../../img/4.svg";
-import vec5 from "./../../../img/5.svg";
-import vec6 from "./../../../img/6.svg";
+
 import YouTube from "react-youtube";
 
 export default function UndanganUmum(props) {
@@ -142,7 +137,7 @@ export default function UndanganUmum(props) {
           </h2>
           <h2 data-aos="fade-up">& Ibu dr. Lana Unwanah</h2>
         </div>
-        <h3>&</h3>
+        <h3 data-aos="zoom-in">&</h3>
         <div>
           <h1 data-aos="fade-up">{NamaPaLkp}</h1>
           <h2 data-aos="fade-up">
@@ -194,7 +189,7 @@ export default function UndanganUmum(props) {
       >
         <img data-aos="fade-down" src={bungaatas} alt="" />
         <div className="bgComment">
-          <h3>WISHES</h3>
+          <h3 data-aos="fade-down">WISHES</h3>
           <CommentForm />
         </div>
       </div>

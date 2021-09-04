@@ -131,7 +131,7 @@ export default function Undangan1(props) {
       >
         {/* <div className="body"> */}
         <h3 data-aos="fade-up">SAVE THE DATE</h3>
-        <img width="45vw" src={bungadepan} alt="" />
+        <img data-aos="zoom-in" width="45vw" src={bungadepan} alt="" />
         <h2 data-aos="fade-up">The Wedding of</h2>
         <h1 data-aos="fade-up">
           {NamaPa} & {NamaPi}
@@ -152,7 +152,7 @@ export default function Undangan1(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <img className="bunga" src={bungaatas} alt="" />
+        <img data-aos="zoom-in" className="bunga" src={bungaatas} alt="" />
         <div className="bgSection2">
           <div className="text">
             <img src={Bismilah} alt="" />
@@ -176,17 +176,26 @@ export default function Undangan1(props) {
       >
         <img src={bungaatas} alt="" />
         <div>
-          <h1>{NamaPiLkp}</h1>
-          <h2>Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M</h2>
-          <h2>& Ibu dr. Lana Unwanah</h2>
+          <h1 data-aos="fade-up">{NamaPiLkp}</h1>
+          <h2 data-aos="fade-up">
+            Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M
+          </h2>
+          <h2 data-aos="fade-up">& Ibu dr. Lana Unwanah</h2>
         </div>
-        <h3>&</h3>
+        <h3 data-aos="zoom-in">&</h3>
         <div>
-          <h1>{NamaPaLkp}</h1>
-          <h2>Putra Pertama Bapak Azis Setyawan, A. Ptnh </h2>
-          <h2>& Ibu Parmi, S.Pd</h2>
+          <h1 data-aos="fade-down">{NamaPaLkp}</h1>
+          <h2 data-aos="fade-down">
+            Putra Pertama Bapak Azis Setyawan, A. Ptnh{" "}
+          </h2>
+          <h2 data-aos="fade-down">& Ibu Parmi, S.Pd</h2>
         </div>
-        <img className="bungabawah" src={bungabawah} alt="" />
+        <img
+          data-aos="fade-down"
+          className="bungabawah"
+          src={bungabawah}
+          alt=""
+        />
       </div>
       <div
         className="section4"
