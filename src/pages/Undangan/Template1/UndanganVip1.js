@@ -103,10 +103,11 @@ export default function Undangan1(props) {
                 <div>
                   <img src={bungadepan} alt="" />
                   <h3>You are invited </h3>
-                  <h3>to</h3>
-                  <h4>The wedding of </h4>
                 </div>
-                <h3>Kiki & Ardi</h3>
+                <div>
+                  <h1> to The wedding of </h1>
+                  <h4>Kiki & Ardi</h4>
+                </div>
                 <div>
                   <h2>Dear </h2>
                   <h1>{Name}</h1>

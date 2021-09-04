@@ -67,10 +67,11 @@ export default function UndanganUmum(props) {
                 <div>
                   <img src={bungadepan} alt="" />
                   <h3>You are invited </h3>
-                  <h3>to</h3>
-                  <h4>The wedding of </h4>
                 </div>
-                <h3>Kiki & Ardi</h3>
+                <div>
+                  <h1> to The wedding of </h1>
+                  <h4>Kiki & Ardi</h4>
+                </div>
                 <div>
                   <button className="button" onClick={playMusic}>
                     Open Invitation
@@ -81,13 +82,12 @@ export default function UndanganUmum(props) {
           </div>
         </div>
       </Modal>
-      <div
+      {/* <div
         className="section1"
         style={{
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        {/* <div className="body"> */}
         <h3 data-aos="fade-up">SAVE THE DATE</h3>
         <img data-aos="fade-up" width="45vw" src={bungadepan} alt="" />
         <h2 data-aos="fade-up">The Wedding of</h2>
@@ -100,7 +100,7 @@ export default function UndanganUmum(props) {
           <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
           <br />
         </div>
-      </div>
+      </div> */}
       <div
         className="section2"
         style={{
