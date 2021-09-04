@@ -149,6 +149,13 @@
   padding: 16px;
   border-radius: 5px;
 }
+@media only screen and (max-width: 600px) {
+  .konfirmasi h4 {
+    max-width: 170px;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+}
 .hadir {
   display: flex;
   justify-content: space-between;
