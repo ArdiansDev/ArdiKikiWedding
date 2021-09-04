@@ -107,7 +107,6 @@ export default function UndanganUmum(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <img data-aos="fade-down" className="bunga" src={bungaatas} alt="" />
         <div className="bgSection2">
           <div className="text">
             <img data-aos="fade-up" src={Bismilah} alt="" />
