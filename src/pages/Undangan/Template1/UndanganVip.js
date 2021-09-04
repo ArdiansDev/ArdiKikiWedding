@@ -116,7 +116,7 @@ export default function Undangan1(props) {
                     Open Invitation
                   </button>
                   <h1 style={{ fontSize: "13px" }}>
-                    *Undangan ini berlaku untuk 1 orang
+                    *Undangan ini berlaku untuk 2 orang
                   </h1>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function Undangan1(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <div>
+        <div className="TimeLocation">
           <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
           <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
           <h3 data-aos="fade-up">Bertempat di Grand Zuri Hotel</h3>
@@ -217,14 +217,14 @@ export default function Undangan1(props) {
             </h4>
           </div>
           <div className="protap-warp">
-            <img data-aos="fade-right" src={vec2} alt="" />
+            <img data-aos="fade-right" src={vec3} alt="" />
             <h4 data-aos="fade-left">
               Mencuci tangan menggunakan air mengalir dengan sabun atau
               handsanitizer sebelum memasuki ruang acara.
             </h4>
           </div>
           <div className="protap-warp">
-            <img data-aos="fade-right" src={vec3} alt="" />
+            <img data-aos="fade-right" src={vec2} alt="" />
             <h4 data-aos="fade-left">
               Periksa suhu saat memasuki ruang acara.
             </h4>
