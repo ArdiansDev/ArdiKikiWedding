@@ -75,19 +75,19 @@ export default function Countdown(props) {
     <div className="Countdown">
       <div className="counter">
         <h4>{timerdays}</h4>
-        <h4>Day</h4>
+        <h3>Day</h3>
       </div>
       <div className="counter">
         <h4>{timerhours}</h4>
-        <h4>Hrs</h4>
+        <h3>Hrs</h3>
       </div>
       <div className="counter">
         <h4>{timerminutes}</h4>
-        <h4>Min</h4>
+        <h3>Min</h3>
       </div>
       <div className="counter">
         <h4>{timerseconds}</h4>
-        <h4>Sec</h4>
+        <h3>Sec</h3>
       </div>
     </div>
   );

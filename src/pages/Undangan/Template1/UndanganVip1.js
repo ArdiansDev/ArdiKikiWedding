@@ -138,14 +138,6 @@ export default function Undangan1(props) {
           {NamaPa} & {NamaPi}
         </h1>
         <br />
-        <div>
-          <h3>Sabtu, 2 Oktober 2021</h3>
-          <h3>08.00 - 12.00 WIB</h3>
-          <br />
-          <h3>Bertempat di Grand Zuri Hotel</h3>
-          <h3>Jl. P. Mangkubumi No.18</h3>
-          <h3>Yogyakarta</h3>
-        </div>
       </div>
       <div
         className="section2"
@@ -205,21 +197,25 @@ export default function Undangan1(props) {
         }}
       >
         <div>
+          <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
+          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">Bertempat di Grand Zuri Hotel</h3>
+          <h3 data-aos="fade-up">Jl. P. Mangkubumi No.18</h3>
+          <h3 data-aos="fade-up">Gowongan, Jetis, Yogyakarta</h3>
+        </div>
+        <img data-aos="zoom-in" height="111" src={bungadepan} alt="" />
+        <div data-aos="zoom-in">
           <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
           <Countdown />
         </div>
-        <img height="111" src={bungadepan} alt="" />
         <div className="warning">
-          <h1>
+          <h1 data-aos="zoom-in">
             Mengingat situasi Pandemi Covid-19 dengan varian Delta yang masih
             masif serta demi kesehatan bersama, mohon maaf kami tidak
             menyediakan makanan & minuman selama acara berlangsung.
           </h1>
         </div>
-        <img height="111" src={bungadepan} alt="" />
       </div>
-
-      <div className="section5"></div>
 
       <div
         className="section6"

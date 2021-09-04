@@ -19,7 +19,7 @@ import vec4 from "./../../../img/4.svg";
 import vec5 from "./../../../img/5.svg";
 import vec6 from "./../../../img/6.svg";
 
-export default function Undangan(props) {
+export default function Undangan1(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -103,10 +103,11 @@ export default function Undangan(props) {
                 <div>
                   <img src={bungadepan} alt="" />
                   <h3>You are invited </h3>
-                  <h3>to</h3>
-                  <h4>The wedding of </h4>
                 </div>
-                <h3>Kiki & Ardi</h3>
+                <div>
+                  <h1> to The wedding of </h1>
+                  <h4>Kiki & Ardi</h4>
+                </div>
                 <div>
                   <h2>Dear </h2>
                   <h1>{Name}</h1>
@@ -131,20 +132,12 @@ export default function Undangan(props) {
       >
         {/* <div className="body"> */}
         <h3 data-aos="fade-up">SAVE THE DATE</h3>
-        <img width="45vw" src={bungadepan} alt="" />
+        <img data-aos="zoom-in" width="45vw" src={bungadepan} alt="" />
         <h2 data-aos="fade-up">The Wedding of</h2>
         <h1 data-aos="fade-up">
           {NamaPa} & {NamaPi}
         </h1>
         <br />
-        <div>
-          <h3>Sabtu, 2 Oktober 2021</h3>
-          <h3>08.00 - 12.00 WIB</h3>
-          <br />
-          <h3>Bertempat di Grand Zuri Hotel</h3>
-          <h3>Jl. P. Mangkubumi No.18</h3>
-          <h3>Yogyakarta</h3>
-        </div>
       </div>
       <div
         className="section2"
@@ -152,7 +145,7 @@ export default function Undangan(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <img className="bunga" src={bungaatas} alt="" />
+        <img data-aos="zoom-in" className="bunga" src={bungaatas} alt="" />
         <div className="bgSection2">
           <div className="text">
             <img src={Bismilah} alt="" />
@@ -176,17 +169,26 @@ export default function Undangan(props) {
       >
         <img src={bungaatas} alt="" />
         <div>
-          <h1>{NamaPiLkp}</h1>
-          <h2>Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M</h2>
-          <h2>& Ibu dr. Lana Unwanah</h2>
+          <h1 data-aos="fade-up">{NamaPiLkp}</h1>
+          <h2 data-aos="fade-up">
+            Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M
+          </h2>
+          <h2 data-aos="fade-up">& Ibu dr. Lana Unwanah</h2>
         </div>
-        <h3>&</h3>
+        <h3 data-aos="zoom-in">&</h3>
         <div>
-          <h1>{NamaPaLkp}</h1>
-          <h2>Putra Pertama Bapak Azis Setyawan, A. Ptnh </h2>
-          <h2>& Ibu Parmi, S.Pd</h2>
+          <h1 data-aos="fade-down">{NamaPaLkp}</h1>
+          <h2 data-aos="fade-down">
+            Putra Pertama Bapak Azis Setyawan, A. Ptnh{" "}
+          </h2>
+          <h2 data-aos="fade-down">& Ibu Parmi, S.Pd</h2>
         </div>
-        <img className="bungabawah" src={bungabawah} alt="" />
+        <img
+          data-aos="fade-down"
+          className="bungabawah"
+          src={bungabawah}
+          alt=""
+        />
       </div>
       <div
         className="section4"
@@ -195,21 +197,25 @@ export default function Undangan(props) {
         }}
       >
         <div>
+          <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
+          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">Bertempat di Grand Zuri Hotel</h3>
+          <h3 data-aos="fade-up">Jl. P. Mangkubumi No.18</h3>
+          <h3 data-aos="fade-up">Gowongan, Jetis, Yogyakarta</h3>
+        </div>
+        <img data-aos="zoom-in" height="111" src={bungadepan} alt="" />
+        <div data-aos="zoom-in">
           <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
           <Countdown />
         </div>
-        <img height="111" src={bungadepan} alt="" />
         <div className="warning">
-          <h1>
+          <h1 data-aos="zoom-in">
             Mengingat situasi Pandemi Covid-19 dengan varian Delta yang masih
             masif serta demi kesehatan bersama, mohon maaf kami tidak
             menyediakan makanan & minuman selama acara berlangsung.
           </h1>
         </div>
-        <img height="111" src={bungadepan} alt="" />
       </div>
-
-      <div className="section5"></div>
 
       <div
         className="section6"
@@ -258,11 +264,6 @@ export default function Undangan(props) {
           </div>
         </div>
       </div>
-      {/* <div className="section7">
-        <br />
-        <h3>Berikan Ucapan</h3>
-        <CommentForm nama={Name} />
-      </div> */}
     </div>
   );
 }

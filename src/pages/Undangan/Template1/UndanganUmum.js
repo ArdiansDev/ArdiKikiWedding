@@ -174,11 +174,6 @@ export default function UndanganUmum(props) {
         <div className="Youtube">
           <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />
         </div>
-        <div>
-          <h2 data-aos="fade-up">Sabtu, 2 Oktober 2021</h2>
-          <h2 data-aos="fade-up">09.00 WIB | Yogyakarta</h2>
-          <br />
-        </div>
       </div>
 
       <div
