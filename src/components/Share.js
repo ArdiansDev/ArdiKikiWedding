@@ -199,7 +199,7 @@ Wassalamu'alaikum Wr. Wb.
               <SaveIcon /> Save
             </Button>
           </Dialog>
-          <SettingsIcon onClick={handleClickOpen} className="PrintIcon" />
+          {/* <SettingsIcon onClick={handleClickOpen} className="PrintIcon" /> */}
           <WhatsappShareButton url={Pesan}>
             <People className="PrintIcon" />
           </WhatsappShareButton>
