@@ -15,6 +15,8 @@ import Konfirmasi from "./pages/Konfirmasi";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Undangan from "./pages/Undangan/Template1/UndanganVip";
+import Undangan1 from "./pages/Undangan/Template1/UndanganVip1";
+
 import UndanganUmum from "./pages/Undangan/Template1/UndanganUmum";
 
 import Notfound from "./pages/404";
@@ -42,13 +44,14 @@ function App() {
               <PrivateRoute path="/Build" exact component={Build} />
               <Route path="/login" exact component={Login} />
               <Route path="/signup" exact component={Signup} />
+              <Route path="/404/" component={UndanganUmum} />
               <Route path="/" exact component={UndanganUmum} />
               <Route path="/:id" exact component={Undangan} />
+              <Route path="/vip/:id" exact component={Undangan1} />
 
               <Route path="/imgcrop" exact component={Countdown} />
 
               {/* <Route path="/Undangan/:uid" exact component={Undangan} /> */}
-              <Route path="/404/" exact component={Notfound} />
             </Switch>
           </AuthProvider>
         </Router>

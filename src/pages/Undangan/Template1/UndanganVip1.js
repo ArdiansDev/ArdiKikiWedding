@@ -19,7 +19,7 @@ import vec4 from "./../../../img/4.svg";
 import vec5 from "./../../../img/5.svg";
 import vec6 from "./../../../img/6.svg";
 
-export default function Undangan(props) {
+export default function Undangan1(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -115,7 +115,7 @@ export default function Undangan(props) {
                     Open Invitation
                   </button>
                   <h1 style={{ fontSize: "13px" }}>
-                    *Undangan ini berlaku untuk 1 orang
+                    *Undangan ini berlaku untuk 2 orang
                   </h1>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function otfound() {
+export default function Notfound() {
   return (
     <div className="App">
       <h1>404</h1>
