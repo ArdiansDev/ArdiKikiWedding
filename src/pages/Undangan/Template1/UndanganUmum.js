@@ -144,12 +144,7 @@ export default function UndanganUmum(props) {
           </h2>
           <h2 data-aos="fade-up">& Ibu Parmi, S.Pd</h2>
         </div>
-        <img
-          data-aos="fade-up"
-          className="bungabawah"
-          src={bungabawah}
-          alt=""
-        />
+        <div>______</div>
       </div>
       <div
         className="section4"
@@ -157,11 +152,13 @@ export default function UndanganUmum(props) {
           backgroundImage: `url(${bgOpen})`,
         }}
       >
-        <div data-aos="fade-up">
-          <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
-          <Countdown />
+        <img data-aos="fade-up" className="bungaatas" src={bungaatas} alt="" />
+        <div>
+          <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
+          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">Yogyakarta</h3>
         </div>
-        <img data-aos="fade-up" height="111" src={bungadepan} alt="" />
+
         <div>
           <h2 data-aos="fade-up">VIRTUAL WEDDING</h2>
           <h1 data-aos="fade-up">
@@ -172,6 +169,12 @@ export default function UndanganUmum(props) {
         </div>
         <div className="Youtube">
           <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />
+        </div>
+        <img data-aos="fade-up" height="111" src={bungadepan} alt="" />
+
+        <div data-aos="fade-up">
+          <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
+          <Countdown />
         </div>
       </div>
 

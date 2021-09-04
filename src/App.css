@@ -438,7 +438,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 23px 60px 23px;
+  padding: 0 23px 60px 23px;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 24px 0 24px 0;
