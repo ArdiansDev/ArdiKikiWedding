@@ -186,7 +186,7 @@ export default function UndanganUmum(props) {
       >
         <img data-aos="fade-down" src={bungaatas} alt="" />
         <div className="bgComment">
-          <h3 data-aos="fade-down">WISHES</h3>
+          <h1 data-aos="fade-down">WISHES</h1>
           <CommentForm />
         </div>
       </div>
