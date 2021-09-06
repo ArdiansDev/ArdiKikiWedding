@@ -13,7 +13,7 @@ import Bismilah from "./../../../img/Bismilah.png";
 
 import YouTube from "react-youtube";
 
-export default function UndanganUmum(props) {
+export default function UndanganEn(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -168,7 +168,6 @@ export default function UndanganUmum(props) {
           </h1>
         </div>
         <div
-          data-aos="fade-up"
           className="Youtube"
           onClick={() => {
             window.open("https://www.w3schools.com");
@@ -176,7 +175,7 @@ export default function UndanganUmum(props) {
         >
           <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />
         </div>
-        <img data-aos="zoom-in" height="111" src={bungadepan} alt="" />
+        <img data-aos="fade-up" height="111" src={bungadepan} alt="" />
 
         <div data-aos="fade-up">
           <h4 data-aos="fade-up">COUNTING TO THE BIG DAYS</h4>
@@ -193,7 +192,7 @@ export default function UndanganUmum(props) {
         <img data-aos="fade-down" src={bungaatas} alt="" />
         <div className="bgComment">
           <h1 data-aos="fade-down">WISHES</h1>
-          <CommentForm data-aos="fade-up" />
+          <CommentForm />
         </div>
       </div>
     </div>
