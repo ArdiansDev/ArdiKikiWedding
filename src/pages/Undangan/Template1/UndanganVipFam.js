@@ -20,7 +20,7 @@ import vec5 from "./../../../img/5.svg";
 import vec6 from "./../../../img/6.svg";
 import imgPa from "./../../../img/imgPa.png";
 import imgPi from "./../../../img/imgPi.png";
-export default function Undangan1(props) {
+export default function UndanganFam(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -116,9 +116,6 @@ export default function Undangan1(props) {
                   <button className="button" onClick={playMusic}>
                     Open Invitation
                   </button>
-                  <h1 style={{ fontSize: "13px" }}>
-                    *Undangan ini berlaku untuk 2 orang
-                  </h1>
                 </div>
               </div>
             </div>
@@ -254,6 +251,11 @@ export default function Undangan1(props) {
           </div>
         </div>
       </div>
+      {/* <div className="section7">
+        <br />
+        <h3>Berikan Ucapan</h3>
+        <CommentForm nama={Name} />
+      </div> */}
     </div>
   );
 }

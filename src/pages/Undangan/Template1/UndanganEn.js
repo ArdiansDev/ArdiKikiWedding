@@ -111,11 +111,10 @@ export default function UndanganEn(props) {
           <div className="text">
             <img data-aos="fade-up" src={Bismilah} alt="" />
             <h3 data-aos="fade-up">
-              “Dan diantara tanda-tanda kekuasaan-Nya ialah diciptakan Nya
-              untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat
-              ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu.
-              sesungguhnya yang demikian menjadi tanda- tanda kebesaran-Nya bagi
-              orang-orang yang berfikir”
+              “And one of His signs is that He created mates for you from
+              yourselves that you may find rest in them, and He put between you
+              love and compassion; most surely there are signs in this for a
+              people who reflect.”
             </h3>
 
             <h3 data-aos="fade-up">- (Q.S Ar - Rum : 21) -</h3>
@@ -132,17 +131,15 @@ export default function UndanganEn(props) {
         <div>
           <h1 data-aos="fade-up">{NamaPiLkp}</h1>
           <h2 data-aos="fade-up">
-            Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M
+            The Daughter of Mr. Fansuri Perbatasari, S.E., M.M
           </h2>
-          <h2 data-aos="fade-up">& Ibu dr. Lana Unwanah</h2>
+          <h2 data-aos="fade-up">& Mrs. dr. Lana Unwanah</h2>
         </div>
         <h3 data-aos="zoom-in">&</h3>
         <div>
           <h1 data-aos="fade-up">{NamaPaLkp}</h1>
-          <h2 data-aos="fade-up">
-            Putra Pertama Bapak Azis Setyawan, A. Ptnh{" "}
-          </h2>
-          <h2 data-aos="fade-up">& Ibu Parmi, S.Pd</h2>
+          <h2 data-aos="fade-up">The Son of Mr. Azis Setyawan, A. Ptnh </h2>
+          <h2 data-aos="fade-up">& Mrs. Parmi, S.Pd</h2>
         </div>
         <div>______</div>
       </div>
@@ -154,17 +151,16 @@ export default function UndanganEn(props) {
       >
         <img data-aos="fade-up" className="bungaatas" src={bungaatas} alt="" />
         <div className="TimeLocation">
-          <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
-          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">Saturday, 2 Oktober 2021 </h3>
+          <h3 data-aos="fade-up">08.00 - 12.00 GMT+7</h3>
           <h3 data-aos="fade-up">Yogyakarta</h3>
         </div>
 
         <div>
           <h2 data-aos="fade-up">VIRTUAL WEDDING</h2>
           <h1 data-aos="fade-up">
-            Mengingat pandemi covid-19 tidak semua teman diperbolehkan
-            menghadiri pernikahan kami, kami mempublikasikan pernikahan kami
-            secara virtual melalui youtube live streaming.
+            Due to the pandemic, our wedding will be held virtually. The live
+            streaming can be accessed via the following YouTube link:
           </h1>
         </div>
         <div

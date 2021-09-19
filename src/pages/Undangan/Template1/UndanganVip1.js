@@ -18,7 +18,8 @@ import vec3 from "./../../../img/3.svg";
 import vec4 from "./../../../img/4.svg";
 import vec5 from "./../../../img/5.svg";
 import vec6 from "./../../../img/6.svg";
-
+import imgPa from "./../../../img/imgPa.png";
+import imgPi from "./../../../img/imgPi.png";
 export default function Undangan1(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -154,6 +155,8 @@ export default function Undangan1(props) {
       >
         <img src={bungaatas} alt="" />
         <div>
+          <img width="250px" data-aos="fade-up" src={imgPi} alt="" />
+
           <h1 data-aos="fade-up">{NamaPiLkp}</h1>
           <h2 data-aos="fade-up">
             Putri Pertama Bapak Fansuri Perbatasari, S.E., M.M
@@ -162,6 +165,8 @@ export default function Undangan1(props) {
         </div>
         <h3 data-aos="zoom-in">&</h3>
         <div>
+          <img width="250px" data-aos="fade-up" src={imgPa} alt="" />
+
           <h1 data-aos="fade-down">{NamaPaLkp}</h1>
           <h2 data-aos="fade-down">
             Putra Pertama Bapak Azis Setyawan, A. Ptnh{" "}

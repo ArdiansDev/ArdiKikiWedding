@@ -16,9 +16,9 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Undangan from "./pages/Undangan/Template1/UndanganVip";
 import Undangan1 from "./pages/Undangan/Template1/UndanganVip1";
-
+import UndanganFam from "./pages/Undangan/Template1/UndanganVipFam";
 import UndanganUmum from "./pages/Undangan/Template1/UndanganUmum";
-
+import UndanganEn from "./pages/Undangan/Template1/UndanganEn";
 import Notfound from "./pages/404";
 import Build from "./pages/Build";
 import Signup from "./pages/SignUp";
@@ -46,9 +46,10 @@ function App() {
               <Route path="/signup" exact component={Signup} />
               <Route path="/404/" component={UndanganUmum} />
               <Route path="/" exact component={UndanganUmum} />
-              <Route path="/:id" exact component={Undangan} />
-              <Route path="/vip/:id" exact component={Undangan1} />
-
+              <Route path="/vip2/:id" exact component={Undangan} />
+              <Route path="/vip1/:id" exact component={Undangan1} />
+              <Route path="/vip/:id" exact component={UndanganFam} />
+              <Route path="/en" exact component={UndanganEn} />
               <Route path="/imgcrop" exact component={Countdown} />
 
               {/* <Route path="/Undangan/:uid" exact component={Undangan} /> */}

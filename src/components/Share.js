@@ -15,7 +15,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import CloseIcon from "@material-ui/icons/Close";
 import SaveIcon from "@material-ui/icons/Save";
-import { People, Person } from "@material-ui/icons";
+import { People, Person, GroupAdd } from "@material-ui/icons";
+// import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 export default function Nama({ name }) {
   const [open, setOpen] = React.useState(false);
 
@@ -59,7 +60,7 @@ Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di
 
 Berikut link untuk info lengkap dari acara kami
 
-${window.location.origin + `/${name.id}`}
+${window.location.origin + `/vip1/${name.id}`}
 
 Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
 
@@ -68,6 +69,23 @@ Wassalamu'alaikum Wr. Wb.
 
 `;
   const Pesan2 = `Assalamu'alaikum wr.wb.
+
+Bismillahirahmanirrahim.
+
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di acara pernikahan kami 
+
+Berikut link untuk info lengkap dari acara kami
+
+${window.location.origin + `/vip2/${name.id}`}
+
+Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
+
+Wassalamu'alaikum Wr. Wb.
+
+
+`;
+
+  const Pesan3 = `Assalamu'alaikum wr.wb.
 
 Bismillahirahmanirrahim.
 
@@ -205,6 +223,9 @@ Wassalamu'alaikum Wr. Wb.
           </WhatsappShareButton>
           <WhatsappShareButton url={Pesan2}>
             <Person className="PrintIcon" />
+          </WhatsappShareButton>
+          <WhatsappShareButton url={Pesan3}>
+            <GroupAdd className="PrintIcon" />
           </WhatsappShareButton>
         </div>
       </div>
