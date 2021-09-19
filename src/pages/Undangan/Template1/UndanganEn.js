@@ -10,7 +10,8 @@ import bgOpen from "./../../../img/bgOpen.png";
 import bungaatas from "./../../../img/bungaatas.png";
 import bungabawah from "./../../../img/bungabawah.png";
 import Bismilah from "./../../../img/Bismilah.png";
-
+import imgPa from "./../../../img/imgPa.png";
+import imgPi from "./../../../img/imgPi.png";
 import YouTube from "react-youtube";
 
 export default function UndanganEn(props) {
@@ -129,6 +130,8 @@ export default function UndanganEn(props) {
       >
         <img data-aos="fade-down" src={bungaatas} alt="" />
         <div>
+          <img width="250px" data-aos="fade-up" src={imgPi} alt="" />
+
           <h1 data-aos="fade-up">{NamaPiLkp}</h1>
           <h2 data-aos="fade-up">
             The Daughter of Mr. Fansuri Perbatasari, S.E., M.M
@@ -137,6 +140,8 @@ export default function UndanganEn(props) {
         </div>
         <h3 data-aos="zoom-in">&</h3>
         <div>
+          <img width="250px" data-aos="fade-up" src={imgPa} alt="" />
+
           <h1 data-aos="fade-up">{NamaPaLkp}</h1>
           <h2 data-aos="fade-up">The Son of Mr. Azis Setyawan, A. Ptnh </h2>
           <h2 data-aos="fade-up">& Mrs. Parmi, S.Pd</h2>
