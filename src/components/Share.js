@@ -219,10 +219,10 @@ Wassalamu'alaikum Wr. Wb.
           </Dialog>
           {/* <SettingsIcon onClick={handleClickOpen} className="PrintIcon" /> */}
           <WhatsappShareButton url={Pesan}>
-            <People className="PrintIcon" />
+            <Person className="PrintIcon" />
           </WhatsappShareButton>
           <WhatsappShareButton url={Pesan2}>
-            <Person className="PrintIcon" />
+            <People className="PrintIcon" />
           </WhatsappShareButton>
           <WhatsappShareButton url={Pesan3}>
             <GroupAdd className="PrintIcon" />
