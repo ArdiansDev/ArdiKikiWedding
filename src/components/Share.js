@@ -52,55 +52,94 @@ export default function Nama({ name }) {
 
   const [Uid, setUid] = useState("");
   const [LinkUndangan, setLinkUndangan] = useState([]);
-  const Pesan = `Assalamu'alaikum wr.wb.
+  const Pesan = `
+  _Bismillahirrahmanirrahim_ 
 
-Bismillahirahmanirrahim.
+Assalamu'alaikum Wa rahmatullahi Wa barakaatuh
 
-Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di acara pernikahan kami 
+Dengan memohon Rahmat & Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara akad nikah putra-putri kami :
 
-Berikut link untuk info lengkap dari acara kami
+*Fatchiyah Rizky Nasabie, S.H*
+                      *&*
+*Ardiansyah Parwanto, S.Ak*
 
-${window.location.origin + `/vip1/${name.id}`}
+Yang Insya Allah akan dilaksanakan pada:
 
-Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
+Hari/Tanggal: Sabtu, 2 Oktober 2021
+Pukul: 08.00 WIB (hadir tepat waktu)
+Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
 
-Wassalamu'alaikum Wr. Wb.
-
-
-`;
-  const Pesan2 = `Assalamu'alaikum wr.wb.
-
-Bismillahirahmanirrahim.
-
-Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di acara pernikahan kami 
-
-Berikut link untuk info lengkap dari acara kami
-
-${window.location.origin + `/vip2/${name.id}`}
-
-Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
-
-Wassalamu'alaikum Wr. Wb.
+Info selengkapnya dapat dilihat pada link berikut : ${
+    window.location.origin + `/vip1/${name.id}`
+  }
 
 
-`;
-
-  const Pesan3 = `Assalamu'alaikum wr.wb.
-
-Bismillahirahmanirrahim.
-
-Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i di acara pernikahan kami 
-
-Berikut link untuk info lengkap dari acara kami
-
-${window.location.origin + `/vip/${name.id}`}
-
-Demi menjaga protokol kesehatan selama pandemi, dimohon untuk menyesuaikan dengan kondisi kesehatan dan daerah masing-masing. Besar harapan kami untuk mengedepankan kesehatan semua pihak dan doa restu dari Bapak/Ibu/Saudara/i.
-
-Wassalamu'alaikum Wr. Wb.
+Wassalamu'alaikum Wa rahmatullahi Wa barakaatuh
 
 
-`;
+Kami yang berbahagia,
+Kelg. Bpk. Fansuri Perbatasari & Ibu Lana Unwanah
+
+Kelg. Bpk. Azis Setyawan & Ibu Parmi`;
+  const Pesan2 = `
+  _Bismillahirrahmanirrahim_ 
+
+Assalamu'alaikum Wa rahmatullahi Wa barakaatuh
+
+Dengan memohon Rahmat & Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara akad nikah putra-putri kami :
+
+*Fatchiyah Rizky Nasabie, S.H*
+                      *&*
+*Ardiansyah Parwanto, S.Ak*
+
+Yang Insya Allah akan dilaksanakan pada:
+
+Hari/Tanggal: Sabtu, 2 Oktober 2021
+Pukul: 08.00 WIB (hadir tepat waktu)
+Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
+
+Info selengkapnya dapat dilihat pada link berikut : ${
+    window.location.origin + `/vip2/${name.id}`
+  }
+
+
+Wassalamu'alaikum Wa rahmatullahi Wa barakaatuh
+
+
+Kami yang berbahagia,
+Kelg. Bpk. Fansuri Perbatasari & Ibu Lana Unwanah
+
+Kelg. Bpk. Azis Setyawan & Ibu Parmi`;
+
+  const Pesan3 = `
+  _Bismillahirrahmanirrahim_ 
+
+Assalamu'alaikum Wa rahmatullahi Wa barakaatuh
+
+Dengan memohon Rahmat & Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara akad nikah putra-putri kami :
+
+*Fatchiyah Rizky Nasabie, S.H*
+                      *&*
+*Ardiansyah Parwanto, S.Ak*
+
+Yang Insya Allah akan dilaksanakan pada:
+
+Hari/Tanggal: Sabtu, 2 Oktober 2021
+Pukul: 08.00 WIB (hadir tepat waktu)
+Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
+
+Info selengkapnya dapat dilihat pada link berikut : ${
+    window.location.origin + `/vip/${name.id}`
+  }
+
+
+Wassalamu'alaikum Wa rahmatullahi Wa barakaatuh
+
+
+Kami yang berbahagia,
+Kelg. Bpk. Fansuri Perbatasari & Ibu Lana Unwanah
+
+Kelg. Bpk. Azis Setyawan & Ibu Parmi`;
 
   useEffect(() => {
     fire.auth().onAuthStateChanged((user) => {
