@@ -159,7 +159,7 @@ export default function UndanganUmum(props) {
         <img data-aos="fade-up" className="bungaatas" src={bungaatas} alt="" />
         <div className="TimeLocation">
           <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
-          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">08.00 WIB</h3>
           <h3 data-aos="fade-up">Yogyakarta</h3>
         </div>
 

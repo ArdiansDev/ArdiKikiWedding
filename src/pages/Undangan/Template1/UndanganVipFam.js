@@ -185,7 +185,7 @@ export default function UndanganFam(props) {
       >
         <div className="TimeLocation">
           <h3 data-aos="fade-up">Sabtu, 2 Oktober 2021</h3>
-          <h3 data-aos="fade-up">08.00 - 12.00 WIB</h3>
+          <h3 data-aos="fade-up">08.00 WIB</h3>
           <h3 data-aos="fade-up">Bertempat di Grand Zuri Hotel</h3>
           <h3 data-aos="fade-up">Jl. P. Mangkubumi No.18</h3>
           <h3 data-aos="fade-up">Gowongan, Jetis, Yogyakarta</h3>
