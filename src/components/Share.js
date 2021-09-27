@@ -70,7 +70,7 @@ Pukul: 08.00 WIB (hadir tepat waktu)
 Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
 
 Info selengkapnya dapat dilihat pada link berikut : ${
-    window.location.origin + `/vip1/${name.id}`
+    window.location.origin + `/vip1/${name.id}/`
   }
 
 
@@ -99,7 +99,7 @@ Pukul: 08.00 WIB (hadir tepat waktu)
 Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
 
 Info selengkapnya dapat dilihat pada link berikut : ${
-    window.location.origin + `/vip2/${name.id}`
+    window.location.origin + `/vip2/${name.id}/`
   }
 
 
@@ -129,7 +129,7 @@ Pukul: 08.00 WIB (hadir tepat waktu)
 Tempat: Ruang Mulia 1, Lantai 2 Hotel Grand Zuri Malioboro, Jl. Mangkubumi No. 18 Yogyakarta
 
 Info selengkapnya dapat dilihat pada link berikut : ${
-    window.location.origin + `/vip/${name.id}`
+    window.location.origin + `/vip/${name.id}/`
   }
 
 
