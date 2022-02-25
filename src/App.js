@@ -45,11 +45,11 @@ function App() {
               <Route path="/login" exact component={Login} />
               <Route path="/signup" exact component={Signup} />
               <Route path="/404/" component={UndanganUmum} />
-              <Route path="/" exact component={UndanganUmum} />
+              {/* <Route path="/" exact component={UndanganUmum} /> */}
               <Route path="/vip2/:id" exact component={Undangan} />
               <Route path="/vip1/:id" exact component={Undangan1} />
               <Route path="/vip/:id" exact component={UndanganFam} />
-              <Route path="/en" exact component={UndanganEn} />
+              <Route path="/" exact component={UndanganEn} />
               <Route path="/imgcrop" exact component={Countdown} />
 
               {/* <Route path="/Undangan/:uid" exact component={Undangan} /> */}
