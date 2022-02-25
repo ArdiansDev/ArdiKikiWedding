@@ -13,7 +13,7 @@ import Bismilah from "./../../../img/Bismilah.png";
 import imgPa from "./../../../img/imgPa.png";
 import imgPi from "./../../../img/imgPi.png";
 import YouTube from "react-youtube";
-
+import couple from "./../../../img/couple.png";
 export default function UndanganEn(props) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -25,10 +25,10 @@ export default function UndanganEn(props) {
   const handleClose1 = () => setShow1(false);
 
   // detail acara
-  const NamaPa = "Ardi";
-  const NamaPi = "Kiki";
-  const NamaPaLkp = "Ardiansyah Parwanto, S.Ak";
-  const NamaPiLkp = "Fatchiyah Rizky Nasabie, S.H";
+  // const NamaPa = "Ardi";
+  // const NamaPi = "Kiki";
+  const NamaPaLkp = "Hadumi Setiaji";
+  const NamaPiLkp = "Ishlah Hasanah Rohimah";
 
   //music
   const [Music, setMusic] = useState();
@@ -71,7 +71,9 @@ export default function UndanganEn(props) {
                 </div>
                 <div>
                   <h1> to The wedding of </h1>
-                  <h4>Kiki & Ardi</h4>
+                  <h4>
+                    Hadumi Setiaji <br /> & <br /> Ishlah Hasanah Rohimah{" "}
+                  </h4>
                 </div>
                 <div>
                   <button className="button" onClick={playMusic}>
@@ -130,23 +132,25 @@ export default function UndanganEn(props) {
       >
         <img data-aos="fade-down" src={bungaatas} alt="" />
         <div>
-          <img width="250px" data-aos="fade-up" src={imgPi} alt="" />
+          <img width="250px" data-aos="fade-up" src={couple} alt="" />
 
-          <h1 data-aos="fade-up">{NamaPiLkp}</h1>
-          <h2 data-aos="fade-up">
+          <h1 data-aos="fade-up">
+            {NamaPaLkp} <br /> & <br /> {NamaPiLkp}
+          </h1>
+          {/* <h2 data-aos="fade-up">
             The Daughter of Mr. Fansuri Perbatasari, S.E., M.M
           </h2>
-          <h2 data-aos="fade-up">& Mrs. dr. Lana Unwanah</h2>
+          <h2 data-aos="fade-up">& Mrs. dr. Lana Unwanah</h2> */}
         </div>
-        <h3 data-aos="zoom-in">&</h3>
+        {/* <h3 data-aos="zoom-in">&</h3> */}
         <div>
-          <img width="250px" data-aos="fade-up" src={imgPa} alt="" />
+          {/* <img width="250px" data-aos="fade-up" src={imgPa} alt="" /> */}
 
-          <h1 data-aos="fade-up">{NamaPaLkp}</h1>
-          <h2 data-aos="fade-up">The Son of Mr. Azis Setyawan, A. Ptnh </h2>
-          <h2 data-aos="fade-up">& Mrs. Parmi, S.Pd</h2>
+          {/* <h1 data-aos="fade-up">{NamaPaLkp}</h1> */}
+          {/* <h2 data-aos="fade-up">The Son of Mr. Azis Setyawan, A. Ptnh </h2>
+          <h2 data-aos="fade-up">& Mrs. Parmi, S.Pd</h2> */}
         </div>
-        <div>______</div>
+        {/* <div >______</div> */}
       </div>
       <div
         className="section4"
@@ -156,12 +160,12 @@ export default function UndanganEn(props) {
       >
         <img data-aos="fade-up" className="bungaatas" src={bungaatas} alt="" />
         <div className="TimeLocation">
-          <h3 data-aos="fade-up">Saturday, 2 Oktober 2021 </h3>
-          <h3 data-aos="fade-up">08.00 - 12.00 GMT+7</h3>
-          <h3 data-aos="fade-up">Yogyakarta</h3>
+          <h3 data-aos="fade-up">Saturday, 26 Feb 2022 </h3>
+          <h3 data-aos="fade-up">09.00 - 12.00 GMT+7</h3>
+          <h3 data-aos="fade-up">Cianjur</h3>
         </div>
 
-        <div>
+        {/* <div>
           <h2 data-aos="fade-up">VIRTUAL WEDDING</h2>
           <h1 data-aos="fade-up">
             Due to the pandemic, our wedding will be held virtually. The live
@@ -175,7 +179,7 @@ export default function UndanganEn(props) {
           }}
         >
           <YouTube className="player" videoId="1rHm_uMceZU" opts={opts} />
-        </div>
+        </div> */}
         <img data-aos="fade-up" height="111" src={bungadepan} alt="" />
 
         <div data-aos="fade-up">

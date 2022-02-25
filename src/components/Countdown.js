@@ -49,7 +49,7 @@ export default function Countdown(props) {
     startimer();
   }, []);
 
-  const waktu = moment(`2021-10-02 + 08:00}`, "YYYY-MM-DD HH:mm").valueOf();
+  const waktu = moment(`2022-02-26 + 09:00}`, "YYYY-MM-DD HH:mm").valueOf();
   const startimer = () => {
     setInterval(() => {
       const now = new Date().getTime();
