@@ -27,7 +27,7 @@ export default function UndanganEn(props) {
   // detail acara
   // const NamaPa = "Ardi";
   // const NamaPi = "Kiki";
-  const NamaPaLkp = "Hadumi Setiaji";
+  const NamaPaLkp = "Didik Hadumi Setiaji";
   const NamaPiLkp = "Ishlah Hasanah Rohiman";
 
   //music
@@ -72,7 +72,7 @@ export default function UndanganEn(props) {
                 <div>
                   <h1> to The wedding of </h1>
                   <h4>
-                    Hadumi Setiaji <br /> & <br /> Ishlah Hasanah Rohiman{" "}
+                    Didik Hadumi Setiaji <br /> & <br /> Ishlah Hasanah Rohiman{" "}
                   </h4>
                 </div>
                 <div>
